@@ -1,0 +1,141 @@
+html {
+  font-size: 16px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#main-doc {
+  display: flex;
+}
+
+/* START NAVIGATION */
+.nav-container {
+  min-width: 300px;
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 300px;
+  height: 100%;
+  border-right: 3px solid rgba(0, 22, 22, 0.4);
+}
+
+#navbar > header > h1 {
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  height: 70px;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 70px;
+}
+
+#navbar > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  border-top: 1px solid;
+  line-height: 1.5;
+}
+/* END NAVIGATION */
+
+/* START CONTAINER */
+#container {
+  padding: 30px;
+}
+
+.main-section {
+  color: #4d4e53;
+  font-size: 0.96rem;
+  padding-top: 30px;
+}
+
+.main-section > header > h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: black;
+  margin: 0 0 1rem 0;
+}
+
+.main-section > article {
+  margin: 0 1rem;
+}
+
+.main-section > article > p {
+  padding: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.main-section > article > ul {
+  padding: 0 0 0 40px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.main-section > article > ul > li {
+  margin: 0 0 1rem 20px;
+}
+
+.main-section > article > code {
+  display: block;
+  margin: 0 10px 10px 10px;
+  padding: 1rem;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  line-height: 2;
+  font-size: 0.875rem;
+}
+
+code > .code-comment {
+  color: #ff6a00;
+}
+
+/* END CONTAINER */
+
+/* VIEWPORT FROM BIG TO SMALL */
+@media only screen and (max-width: 815px) {
+  #main-doc {
+    display: block;
+    position: relative;
+  }
+
+  .nav-container {
+    max-height: 275px;
+  }
+
+  .nav-fixed {
+    position: unset;
+    width: 100%;
+    max-height: 275px;
+  }
+
+  #navbar {
+    max-height: 275px;
+  }
+
+  #navbar > header {
+    border-bottom: 1px solid;
+  }
+
+  #navbar > ul {
+    box-sizing: border-box;
+    border-bottom: 3px solid;
+    height: calc(275px - 71px);
+    overflow-y: scroll;
+  }
+}
